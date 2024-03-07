@@ -8,6 +8,10 @@ import torch
 # Start FastApi
 app = FastAPI()
 
+@app.get("/")
+async def root():
+    return {"message": "Welcome to my REST API"}
+
 
 # Receive the message with the correct model
 class Prospect(BaseModel):
